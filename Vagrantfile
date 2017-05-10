@@ -14,5 +14,5 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "bootstrap", type: "shell", path: "provision.sh"
-  config.vm.provision "maintenance", type: "shell", path: "maintenance.sh"
+  config.vm.provision "test", type: "shell", run: "always", path: "test.sh"
 end
